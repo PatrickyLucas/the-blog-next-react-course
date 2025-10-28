@@ -1,7 +1,7 @@
 import { PostModel } from '@/models/post/post-model';
 import { readFile } from 'fs/promises';
 import { resolve } from 'path';
-import { PostRepository } from './json-repositories';
+import { PostRepository } from './json-repository';
 
 const ROOT_DIR = process.cwd();
 const JSON_POSTS_FILE_PATH = resolve(
@@ -33,5 +33,3 @@ export class JsonPostRepository implements PostRepository {
     return post;
   }
 }
-
-export const postRepository: PostRepository = new JsonPostRepository();
