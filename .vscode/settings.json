@@ -8,6 +8,9 @@
   "workbench.editor.labelFormat": "short",
   "editor.tabSize": 2,
   "explorer.compactFolders": false,
+  // "css.validate": false,
+  // "scss.validate": false,
+  // "less.validate": false,
 
   // 🛠 Formatação e Lint
   "editor.defaultFormatter": "esbenp.prettier-vscode",
