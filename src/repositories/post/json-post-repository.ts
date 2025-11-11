@@ -1,7 +1,7 @@
 import { PostModel } from '@/models/post/post-model';
 import { readFile } from 'fs/promises';
 import { resolve } from 'path';
-import { PostRepository } from './json-repository';
+import { PostRepository } from './post-repository';
 
 const ROOT_DIR = process.cwd();
 const JSON_POSTS_FILE_PATH = resolve(
@@ -56,7 +56,7 @@ export class JsonPostRepository implements PostRepository {
     return post;
   }
 
-  async findBySlug(slug: string): Promise<PostModel> {
+  async findBySlugPublic(slug: string): Promise<PostModel> {
     const posts = await this.findAllPublic();
     const post = posts.find(post => post.slug === slug);
 
