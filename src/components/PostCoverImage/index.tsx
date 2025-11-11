@@ -20,6 +20,7 @@ export function PostCoverImage({ imageProps, linkProps }: PostCoverImageProps) {
       )}
     >
       <Image
+        loading='eager'
         {...imageProps}
         className={clsx(
           'w-full',
